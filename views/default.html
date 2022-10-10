@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Url Shortener</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon"
+          type="image/png"
+          href="/images/favicon.png">
+</head>
+<body>
+<header>
+    <h1><a href="/" class="no-underline">PHP Url Shortener</a></h1>
+</header>
+<main id="app">
+    <form name="url-shortener"
+          method="post"
+          action="/">
+        <div>
+            {{ if .Success }}
+                <div class="success">
+                    <span>{{ .LongUrl }}</span>
+                    <span class="text-right">
+                        <a href="{{ .BaseUrl }}/{{ .ShortUrl }}">{{ .BaseUrl }}/{{ .ShortUrl }}</a>
+                    </span>
+                </div>
+            {{ end }}
+            <div>
+                <div>
+                    <label class="font-bold text-2xl" for="phone-number">Enter a URL to shorten:</label>
+                    <div class="mt-1">
+                        {{ if .error }}<div class="error">{{ .error }}</div>{{ end }}
+                        <input type="url"
+                               name="url"
+                               id="url"
+                               class="w-full p-3"
+                               value="{{ .url }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-2">
+            <input type="submit"
+                   name="submit"
+                   value="Shorten the URL">
+            <input type="reset"
+                   name="reset"
+                   value="Cancel">
+        </div>
+    </form>
+</main>
+<footer>
+    <div class="copyright">copyright &copy; Twilio inc. Created by Matthew Setter 2022.</div>
+</footer>
+</body>
+</html>
