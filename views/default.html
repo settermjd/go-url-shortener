@@ -17,11 +17,12 @@
           method="post"
           action="/">
         <div>
-            {{ if .Success }}
+            {{ if .success }}
                 <div class="success">
-                    <span>{{ .LongUrl }}</span>
+                    <span class="truncate"
+                          title="{{ .longURL }}">{{ .longURL }}</span>
                     <span class="text-right">
-                        <a href="{{ .BaseUrl }}/{{ .ShortUrl }}">{{ .BaseUrl }}/{{ .ShortUrl }}</a>
+                        <a href="{{ .baseURL }}/{{ .shortURL }}">{{ .baseURL }}/{{ .shortURL }}</a>
                     </span>
                 </div>
             {{ end }}

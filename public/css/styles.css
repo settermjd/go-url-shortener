@@ -622,25 +622,13 @@ main {
   max-width: 80rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 0px;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
 @media (min-width: 640px) {
   main {
     max-width: 80rem;
-  }
-
-  main {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  main {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }
 
@@ -671,25 +659,13 @@ footer {
   max-width: 80rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 0px;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
 @media (min-width: 640px) {
   footer {
     max-width: 80rem;
-  }
-
-  footer {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  footer {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }
 
@@ -935,6 +911,12 @@ form {
 
 .w-full {
   width: 100%;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .p-3 {
